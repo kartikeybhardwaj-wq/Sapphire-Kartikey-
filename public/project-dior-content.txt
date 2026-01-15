@@ -1,0 +1,961 @@
+PROJECT DIOR - ALL APP CONTENT
+================================
+
+================================================================================
+HOME PAGE
+================================================================================
+
+Welcome to Project Dior
+Create high-quality shopping prompts and evaluation rubrics for AI model testing.
+
+WHY THIS MATTERS
+----------------
+The prompts and rubrics you create will be used to test and improve AI shopping assistants. Your rubric criteria become the scoring system that determines whether an AI's product recommendations are actually helpful.
+
+- Objective Evaluation: Clear criteria ensure consistent, fair scoring across all evaluators.
+- Timeless Standards: Rubrics that work correctly today, next year, and five years from now.
+
+WEEKLY OFFICE HOURS
+-------------------
+Drop in to ask questions, get help with tasks, or discuss feedback. All sessions run Monday–Friday via Zoom.
+
+Onboarding + Attempter Hours: 12:30 PM PT
+For anyone new to the project or working on tasks. Get help with onboarding, prompts, rubrics, or general questions.
+
+Reviewer Hours: 1:00 PM PT
+For reviewers to discuss feedback, escalation decisions, and review quality standards.
+
+BOOTCAMP TRAINING SESSIONS
+--------------------------
+Required for some participants. Sessions are 1–2 hours long. If you've been notified that bootcamp is required for you, please attend one of the sessions below. We'll take attendance at 2 points during each session.
+
+If bootcamp is not required for you, you're welcome to attend but not required.
+
+We'll be scheduling more sessions soon.
+
+Friday, December 19:
+- 11:30 AM – 1:30 PM PT
+- 3:00 – 5:00 PM PT
+
+Saturday, December 20:
+- 10:00 AM – 12:00 PM PT
+- 4:00 – 6:00 PM PT
+
+FOR EACH TASK, YOU'LL CREATE
+----------------------------
+1. A Shopping Prompt
+A natural, realistic shopping query that includes your assigned use case and at least 3 required attributes from your chosen category.
+
+2. An Evaluation Rubric
+You'll edit and expand a provided rubric so it correctly scores the model's response. A completed rubric must have at least 15 positive criteria, at least 3 negative criteria, and accurate weights.
+
+WHEN DOES PAY START?
+--------------------
+The assessment is not paid. Your pay begins with your first task submission after passing the assessment.
+
+COMMUNICATION
+-------------
+All communication happens through Discord. When you're invited to the project, you'll receive a Discord invite email. If you don't have Discord access, reply to the welcome email for assistance.
+
+
+================================================================================
+RUBRIC GUIDE
+================================================================================
+
+Learn how to write objective, measurable, and timeless evaluation criteria that properly test AI shopping assistant responses.
+
+WHAT IS A RUBRIC?
+-----------------
+A rubric is a scoring guide — a list of specific things to look for when evaluating an AI's response. Rubrics turn subjective questions ("Was this response good?") into objective ones ("Did this response do X, Y, and Z?").
+
+Example: Instead of asking "Did the AI give good laptop recommendations?", we check specific criteria like "Recommends at least one laptop with 16GB RAM or more" ✓ or ✗
+
+RUBRIC FORMAT
+-------------
+Every rubric criterion follows this format:
+- Item X:
+- Weight: +5 / +3 / +1 / −1 / −3 / −5
+- Criterion: Self-contained verb-led requirement
+
+First Criterion Is Always Link Validity: Your rubric must always begin with: Weight: +5 — "Provides website links that are valid and lead to product-specific pages."
+
+UNDERSTANDING THE WEIGHT SYSTEM
+-------------------------------
+Each criterion gets a weight that reflects its importance:
+
++5: Critical requirement. The response fails without this.
+    Example: Recommends the correct product category
+
++3: Important requirement. Significantly improves response quality.
+    Example: Matches a specific material requirement
+
++1: Nice to have. Helpful but not essential.
+    Example: Provides a maintenance or care detail
+
+-1: Minor deviation. Slightly reduces quality.
+    Example: Mentions a non-preferred but not harmful colorway
+
+-3: Problematic behavior. Detracts from quality.
+    Example: Recommends an item that doesn't match size requirements
+
+-5: Serious failure. Breaks the task.
+    Example: Recommends a completely incompatible product
+
+POSITIVE VS. NEGATIVE CRITERIA
+------------------------------
+
+Positive Criteria (+1, +3, +5):
+Reward the AI for meeting explicit or implied requirements.
+Examples:
+- Recommends at least one laptop with 16GB RAM or more
+- Recommends at least one coat with a water-resistant exterior such as polyester or nylon
+- Lists dimensions for each recommended table
+Minimum required: 15 positive criteria
+
+Negative Criteria (−1, −3, −5):
+Penalize harmful or incorrect behavior. Negative criteria must test something the model did, not something it failed to do.
+Examples:
+- Recommends any backpack with trekking-pole attachment loops
+- Mentions any dining table shorter than 25 inches in height
+Not allowed: "Fails to include a laptop with 16GB RAM"
+Instead, use a positive criterion: "Recommends at least one laptop with 16GB RAM"
+Minimum required: 3 negative criteria
+
+Rubric Size Requirements: Your rubric must contain between 18 and 40 total items. This includes at least 15 positive and at least 3 negative criteria.
+
+RULES FOR GOOD CRITERIA
+-----------------------
+
+1. Verb-Led Criteria
+Every criterion must start with an action verb: Recommends, Identifies, Specifies, Lists, Describes, Includes, Explains, Provides, Compares, Notes
+BAD: "Laptop has good battery life"
+GOOD: "Recommends at least one laptop with a battery capacity of 4500 mAh or greater"
+
+2. Self-Contained Criteria
+Each criterion must stand alone. A reader must be able to evaluate it without seeing the prompt, the model answer, images, or other criteria. Never reference "the requirement above" or "the photo."
+BAD: "Matches the requirement stated in the prompt"
+GOOD: "Recommends at least one phone case in a pink colorway"
+
+3. Specific & Measurable Criteria
+Use explicit, objective details. Describe measurable attributes (like dimensions), not subjective outcomes.
+If you're using measurements, they just need to be plausible. So look it up if you aren't sure. E.g. look up "medium sized bag dimensions" and use those.
+BAD: "Recommends a roomy bag"
+GOOD: "Recommends at least one bag with a compartment measuring at least 12 × 6 × 6 inches"
+
+4. Timelessness
+Criteria must work years from now. Never include price, sales, stock status, release years, ratings, reviews, popularity, shipping times, or seasonal exclusives. Use timeless attributes like materials, dimensions, specs, and compatibility.
+BAD: "Recommends a laptop under $1000"
+GOOD: "Recommends at least one laptop that weighs 3.5 pounds or less"
+
+5. No Double Negatives
+A criterion must not contain a double negative, which makes evaluation ambiguous. Use clear, single-direction requirements.
+BAD: "Does not recommend any chair that is not stable"
+GOOD: "Recommends at least one chair with a listed weight capacity of at least 250 pounds"
+
+6. Criteria Must Be Atomic
+Each item must test one measurable thing. If you're using "and" or "rather than" to combine multiple requirements, split them into separate criteria.
+BAD: "Recommends at least one chair upholstered in fabric or mesh rather than leather"
+GOOD: "Recommends at least one chair upholstered in fabric or mesh"
+GOOD: "Recommends any chair upholstered in leather (negative criterion)"
+GOOD: Alternatively, split into three: "...upholstered in fabric" + "...upholstered in mesh" + negative for leather
+
+7. No Justification in Criteria
+Criteria must state only the requirement — never include reasoning or justification. Remove phrases like "to maintain...", "since the user...", "because...", or "for better...".
+BAD: "Recommends at least one chair upholstered in fabric or mesh to maintain a casual living-room aesthetic"
+GOOD: "Recommends at least one chair upholstered in fabric or mesh"
+
+8. Translating Context into Criteria
+You can translate prompt details into objective criteria, but never reference the profile you built in the prompt directly. Convert implicit context into measurable product attributes.
+BAD: "Matches the user's love of cars"
+GOOD: "Recommends at least one watch with a motorsport chronograph dial"
+
+9. Evaluate Products, Not Writing Style
+Criteria must evaluate the actual products recommended, not how the AI phrases things. The evaluator inspects the products, not the prose.
+BAD: "Describes each product in precise, technical language"
+GOOD: "Recommends at least one refrigerator with a capacity of 18 cubic feet or greater"
+
+STACKED CRITERIA
+----------------
+A stacked criterion tries to test more than one measurable requirement at the same time. This makes evaluation ambiguous because a single ✓ / ✗ cannot fairly score multiple conditions.
+
+How to Spot Stacked Criteria:
+A stacked criterion almost always contains words like "and," "as well as," "rather than," "both," or multiple numeric thresholds in one sentence.
+- Uses "and" to join two measurable requirements
+- Uses "or" in a way that evaluates more than one condition at once
+- Compares two different attributes in one line
+- Tests two product features but gives only one score
+
+Why Stacked Criteria Are Bad:
+- Ambiguous scoring: If one part is satisfied and another is not, evaluators cannot assign a clear score.
+- Hidden double-counting: It becomes unclear which specific rule the model violated.
+- Breaks rubric independence: Each criterion must evaluate one atomic requirement. Stacking creates dependencies.
+- Harder to debug: If a stacked criterion fails, you can't tell which part the model missed.
+
+Examples: Stacked vs. Atomic
+
+BAD: "Recommends at least one chair with a seat width between 20 and 24 inches and a seat height between 16 and 18 inches"
+GOOD: "Recommends at least one chair with a seat width between 20 and 24 inches"
+GOOD: "Recommends at least one chair with a seat height between 16 and 18 inches"
+
+BAD: "Recommends at least one stroller that reclines fully and weighs less than 20 pounds and includes an adjustable canopy"
+GOOD: "Recommends at least one stroller that reclines fully"
+GOOD: "Recommends at least one stroller that weighs less than 20 pounds"
+GOOD: "Recommends at least one stroller that includes an adjustable canopy"
+
+Quick Rule of Thumb: If a criterion contains "and," it is almost always stacked and needs to be split. Each rubric item must test one atomic, measurable property — never a bundle of them.
+
+THE "NO INVERSES" RULE
+----------------------
+This rule is critical and often misunderstood. Rubrics must never include a positive criterion and a negative criterion that are simply opposites of each other — this results in testing the same requirement twice, which is invalid.
+
+Not Allowed: Inverse Pairs
+These pairs are invalid because they test the same condition from opposite directions. If a recommendation violates one, it automatically violates the other, which breaks rubric independence.
+
+Invalid Pair #1:
+Positive: Recommends at least one laptop with 16GB of RAM or more
+Negative: Recommends any laptop with less than 16GB of RAM
+
+Invalid Pair #2:
+Positive: Recommends at least one backpack with a capacity of at least 25 liters
+Negative: Recommends any backpack with a capacity below 25 liters
+
+Invalid Pair #3:
+Positive: Recommends at least one laptop with 16GB of RAM or more
+Negative: Recommends any laptop with more than 32GB of RAM
+The "or more" in the positive criterion includes all RAM values above 16GB, which means any laptop that violates the negative (by having more than 32GB) would still satisfy the positive. This creates an impossible standard where a recommendation could be penalized for having too much RAM while simultaneously being rewarded for the same attribute.
+
+CRITERIA EVALUATE PRODUCT ATTRIBUTES — NOT THE MODEL'S WRITING
+-------------------------------------------------------------
+Rubrics must judge the products recommended, not how the AI describes them. The AI is allowed to use subjective phrasing such as "a warm red color" or "a sleek design." You must not write criteria that grade the AI's language style.
+
+Not Allowed: Judging Wording, Not Product Attributes
+BAD: "Describes each product using objective specifications"
+BAD: "Explains why each item fits using measurable details only"
+
+Allowed: Judging the Product Itself
+GOOD: "Recommends at least one chair with a seat width of 20 inches or greater"
+GOOD: "Recommends at least one phone case in a pink colorway"
+
+The Rule: Criteria must be objective and explicit, but the model's language does not need to be. Even if the AI says "the color feels cheerful," evaluators look only at the actual colorway of the product — not the tone of the explanation. Only the recommended product attributes must satisfy the rubric.
+
+EXPLICIT VS. IMPLIED REQUIREMENTS
+---------------------------------
+The best rubrics test both explicit requirements (things the user directly stated) and implied requirements (things a smart assistant should figure out from context).
+
+Context in Prompt → Implied Requirement:
+- "I'm a nurse who works 12-hour shifts" → Shoes with arch support or cushioned insoles
+- "Shopping for my 80-year-old grandmother" → Products with large buttons, simple interfaces, or accessibility features
+- "I live in a 400 sq ft studio apartment" → Furniture with compact dimensions or multi-functional design
+- "I have three large dogs and need a new couch" → Couch made of polyester for stain resistance
+
+FINAL RUBRIC CHECKLIST
+----------------------
+✓ Item 1 = Valid product links (+5)
+✓ ≥15 positive + ≥3 negative criteria
+✓ Total items between 18–40
+✓ Verb-led, measurable, timeless, atomic, no justification
+✓ No double negatives or positive/negative inverses
+✓ Fully self-contained
+✓ Evaluates product attributes, not AI writing style
+
+
+================================================================================
+CATEGORIES & USE CASES
+================================================================================
+
+Browse all shopping categories with their required attributes, and see the full list of use cases you may be assigned.
+
+SHOPPING CATEGORIES
+-------------------
+Select a category and use at least 3 attributes from its list in your prompt.
+
+1. Apparel & Accessories
+Attributes: gender, size type (US/EU), size, fit, material, pattern, style, season, occasion, color, care instructions, stretch, closure type, durability
+
+2. Beauty & Personal Care
+Attributes: skin type, hair type, shade, finish, scent, ingredients, formulation type, cruelty-free/vegan, hypoallergenic, expiration/shelf life, application method, coverage, SPF (if relevant)
+
+3. Consumer Electronics
+Attributes: brand, model, device type, processor/chipset, storage, RAM, screen size, resolution, display type, connectivity, battery capacity, charging type, compatibility, ports, durability rating (IP rating)
+
+4. Phones & Accessories
+Attributes: brand, model, storage, carrier/locked/unlocked, 5G support, condition (if preowned), battery health, screen size, camera specs, chipset, charging type, case material, accessory compatibility
+
+5. Computers & Office
+Attributes: device type, brand, model, processor, RAM, storage type/size, screen size, resolution, graphics capability, ports, connectivity, operating system, battery life, ergonomics, peripherals included
+
+6. Home & Kitchen
+Attributes: material, dimensions, capacity/volume, weight, power/wattage, energy rating, safety features, durability, included components, compatibility (induction, dishwasher-safe), finish/color, usage type
+
+7. Furniture
+Attributes: dimensions (W×D×H), material, weight capacity, seating/occupancy capacity, assembly required, style, finish, comfort level, durability, configuration options, care instructions
+
+8. Home Improvement & Tools
+Attributes: tool/part type, material, power type (manual/electric/battery), voltage/wattage, dimensions, compatibility, performance rating, safety features, durability, included accessories
+
+9. Grocery & Household Essentials
+Attributes: product type, net weight/volume, ingredients, nutritional info, allergen info, dietary category (vegan, gluten-free), packaging type, shelf life, scent (for cleaning items), usage type
+
+10. Health & Wellness
+Attributes: product type, size/dosage, active ingredients, function/purpose, compatibility (e.g., device-based), safety certifications, material, weight limit (for equipment), adjustability, durability
+
+11. Baby, Kids & Maternity
+Attributes: age range, safety certification, material, weight/height limit, dimensions, developmental stage, adjustability, included accessories, washability, comfort features, stroller/car seat compatibility
+
+12. Pet Supplies
+Attributes: species, breed size, weight range, ingredient list (food/treats), flavor, size/volume/count, material, durability, safety certifications, function (training, grooming, feeding), suitability for age/life stage
+
+13. Sports, Outdoors & Fitness
+Attributes: sport type, size, weight, material, skill level, activity-specific rating, durability, weather resistance, capacity (e.g., backpacks), safety certifications, adjustability
+
+14. Toys, Games & Hobbies
+Attributes: age range, material, dimensions, skill level, number of pieces, compatibility (e.g., sets/systems), safety certifications, complexity, genre/type, included accessories
+
+15. Auto & Motorcycle
+Attributes: part type, make, model, trim, year range, engine type, transmission compatibility, OEM/aftermarket, material, dimensions, performance rating, installation requirements
+
+16. Arts, Crafts & Sewing
+Attributes: material, size/yardage, color, weight/thickness, compatibility (machine/hand use), tool type, set contents, skill level, durability, finish/texture
+
+17. Books, Movies & Music
+Attributes: format (hardcover/paperback/digital/vinyl), language, edition, genre, release year, runtime/page count/track count, publisher/label, special features (if applicable)
+
+18. Jewelry
+Attributes: material, metal type, gemstone type, gemstone cut, size/dimensions, weight, authenticity, certification, closure type, setting style, condition (if preowned)
+
+19. Garden & Outdoor
+Attributes: product type, material, dimensions, capacity/coverage area, weather resistance, power type (manual/electric/gas), durability, plant type (if relevant), blade/handle specs (for tools)
+
+20. Real Estate
+Attributes: property type, beds, baths, square footage, lot size, year built, unit type, parking, HOA fees, lease/own, heating/cooling type, construction type, appliances included
+
+21. Services
+Attributes: service type, scope of work, duration, expertise level, materials included/not included, location/coverage area, certification or licensing, customization options, limitations/exclusions
+
+USE CASES
+---------
+You will be assigned a use case that your prompt must incorporate. You cannot change your assigned use case.
+
+1. Comparing two products
+"I'm torn between these two laptops — can you compare them and tell me which one is better for video editing?"
+
+2. Similar or look-alike products
+"I found this jacket online but it's sold out — can you find something that looks similar?"
+
+3. New products
+"I need a brand-new vacuum cleaner for hardwood floors — what should I buy?"
+
+4. Preowned or refurbished items
+"I'm looking for a refurbished DSLR camera — which models are reliable?"
+
+5. Purchasing a gift
+"I want to buy a birthday gift for my sister who loves cooking — what kitchen tools would she appreciate?"
+
+6. Life-phase purchases (engagement, wedding, new home, new baby)
+"We're moving into our first home — what essential tools should we buy?"
+
+7. Finding alternatives
+"My favorite moisturizer was discontinued — can you find a comparable replacement?"
+
+8. Finding where to buy
+"Where can I buy this exact chair online?"
+
+9. Budget or price-limited shopping
+"I need a reliable carry-on suitcase under a certain price — what are my options?"
+
+10. Style-based or personalized shopping
+"I like minimalist Scandinavian furniture — can you recommend a sofa that fits that aesthetic?"
+
+11. Problem-solution shopping
+"I keep getting back pain at my desk — which office chairs would help with that?"
+
+12. Attribute-specific shopping (size, material, specs)
+"I need blackout curtains that are at least 95 inches long — what should I buy?"
+
+13. Authenticity or condition checks
+"How can I tell if this designer bag listing is authentic?"
+
+14. Rare, collectible, or limited-edition items
+"I'm searching for a rare vinyl pressing of a 1970s album — can you help me track it down?"
+
+15. Upgrading from an older product
+"I'm upgrading from a 2015 MacBook — what modern laptops are similar but better?"
+
+16. First-time buyer guidance
+"This is my first time buying a road bike — what should I look for?"
+
+17. Travel-related shopping
+"I need a durable backpack for a two-week hiking trip — what should I get?"
+
+18. Hobby or activity-based shopping
+"I want to get into home baking — which stand mixer should I start with?"
+
+Important Clarification: These examples are illustrative only. They do not define or limit the kinds of prompts you can write. You may create any natural, human-sounding shopping request as long as it clearly fits into one of these broad categories. Your task will not be rejected for wording a use case in a certain way — these categories simply help us get a diversity of requests.
+
+
+================================================================================
+PROMPT WRITING GUIDE
+================================================================================
+
+Learn how to write natural, human-sounding shopping prompts that create challenging and valuable evaluation rubrics.
+
+WHAT MAKES A GOOD SHOPPING PROMPT?
+----------------------------------
+A good prompt should sound like something a real person would type into ChatGPT or Google when trying to buy something. It should be written in natural, informal language — not template-like, not over-polished, not robotic.
+
+Think of how you would talk to a store associate if you had recently done a little research, but not enough to know exactly what to buy.
+
+1. SOUND NATURAL AND HUMAN
+--------------------------
+Prompts should:
+- Read like everyday messages
+- Have relaxed grammar
+- Include small imperfections or conversational phrasing
+- Focus on the need, not on formal writing
+
+Natural Phrasing:
+- "I've been thinking about getting a new laptop for work but I'm not really sure what specs I need."
+- "My old hair dryer died and I want something better this time — any ideas?"
+
+Not Allowed:
+- Prompts that look generated by ChatGPT templates
+- Overly perfect academic writing
+- Mechanical listing of attributes
+
+2. USE BOTH EXPLICIT AND IMPLICIT REQUIREMENTS
+----------------------------------------------
+Good prompts include a mix of:
+- Explicit details → directly stated requirements
+- Implicit clues → personal context that indirectly shapes product needs
+
+Explicit requirement example:
+"I need blackout curtains that are at least 95 inches long."
+
+Implicit requirement example:
+"My bedroom gets a lot of sun in the morning and it wakes me up."
+→ A smart assistant should infer that blackout or light-blocking curtains are needed.
+
+Implicit Requirements = Difficulty: Implicit requirements are the #1 source of difficulty in the rubric. Most real humans DO NOT explicitly list every attribute. You should avoid making everything explicit.
+
+3. USE REALISTIC SHOPPING SCENARIOS ONLY
+----------------------------------------
+Allowed:
+- Buying a laptop
+- Finding a used car
+- Choosing a gift
+- Selecting furniture
+- Purchasing a stroller
+- Buying specialty tools
+
+Not Allowed:
+- "I want to buy four houses today"
+- "I'm shopping for 10 luxury cars at once"
+- "I need the exact TV Taylor Swift has"
+
+Prompts must reflect realistic human behavior.
+
+4. INCLUDE AT LEAST 3 REQUIRED ATTRIBUTES
+-----------------------------------------
+Every category has required attributes (see Categories page). Your prompt must naturally mention at least 3 of them.
+
+Example (Furniture):
+- Size ("around 70 inches wide")
+- Material ("fabric, not leather")
+- Style ("mid-century")
+
+Mention them naturally — no lists, no rigid formatting.
+
+5. KEEP THE PROMPT COMPLETELY TIMELESS
+--------------------------------------
+Never Reference:
+- Prices
+- Sales, coupons, deals
+- Availability, stock status
+- Shipping speed
+- Release dates
+- "The newest version," "2024 model," etc.
+- Anything tied to time ("this weekend," "next year")
+
+Use Timeless Attributes:
+- Materials
+- Dimensions
+- Capacity
+- Ergonomics
+- Colors
+- Compatibility
+- Weight limits
+- Safety certifications
+
+6. PROMPTS SHOULD NOT BE TOO SIMPLE
+-----------------------------------
+Overly generic:
+"I need a new microwave. What should I buy?"
+
+This Will NOT Produce Enough Rubric Items: Your prompt MUST contain enough detail (explicit or implicit) to create at least 18 strong rubric criteria, but preferably more.
+
+7. DO NOT INTRODUCE DIFFICULTY WITH STRANGE LANGUAGE
+----------------------------------------------------
+Difficulty should come from:
+- Implicit preferences
+- Subtle functional needs
+- Persona context
+- Multiple constraints that interact
+
+Difficulty Should NOT Come From:
+- Contradictions ("I want something black but also bright white inside")
+- Nonsense requirements
+- Fake model numbers
+- Awkward unnatural sentences
+- Being intentionally confusing
+
+8. PERSONAL DETAILS ARE OPTIONAL BUT USEFUL
+-------------------------------------------
+You can add light background details if they help shape the product needs. You can make up these details completely.
+
+"I'm a grad student so I carry my laptop around every day."
+→ Implies weight + durability matter.
+
+But avoid long fictional biographies. Keep it short and relevant.
+
+9. VARY THE PROMPT'S SPECIFICITY
+--------------------------------
+Not all prompts need the same level of detail. Different levels of specificity create different types of challenge:
+
+Vague (still valid):
+"I want a new blender — something strong enough for smoothies but not super loud."
+
+Directional:
+"I make smoothies every morning with frozen fruit and ice. My current blender struggles, so I need something with more power but not bulky."
+
+Explicit:
+"I need a 64-oz blender with at least 1200 watts and a tamper."
+
+All three types can be good prompts as long as they meet the rules.
+
+10. YOUR PROMPT MUST ALWAYS ENABLE A DIFFICULT RUBRIC
+-----------------------------------------------------
+The prompt must contain enough attributes, needs, context, and implicit requirements to justify:
+- 15+ positive criteria
+- 3+ negative criteria
+- Many opportunities for model failure
+
+If the Prompt Is Too Thin: You cannot complete the task if your prompt doesn't have enough detail to support 18–40 rubric items.
+
+SUMMARY: WHAT MAKES A GOOD PROMPT
+---------------------------------
+
+A Good Prompt Is:
+✓ Natural
+✓ Human-sounding
+✓ Includes explicit + implicit details
+✓ Realistic
+✓ Timeless
+✓ Contains ≥ 3 attributes
+✓ Rich enough for 18–40 rubric items
+✓ Interesting/reasonable—not weird
+
+A Good Prompt Is NOT:
+✗ Robotic
+✗ Overly polished
+✗ Overly generic
+✗ Overly specific
+✗ Time-dependent
+✗ Fictional or unrealistic
+✗ Repetitive
+✗ Contradictory
+
+
+================================================================================
+TASK WORKFLOW
+================================================================================
+
+Follow these steps to complete each task.
+
+Step 1: Review Your Assigned Use Case
+You'll be automatically assigned a use case when you start a task — you cannot change it. Review the Use Cases (at the bottom of the Categories page) to get an idea for what each use case means.
+
+Step 2: Choose a Category
+Now that you have your use case, select a shopping category from the category list that fits well with your assigned use case. Each category has required attributes — your prompt must include at least 3 of them.
+
+Step 3: Write a Natural, Timeless Shopping Prompt
+Write a realistic shopping prompt that sounds like something a real person would type. Include both explicit and implicit requirements to create challenge.
+
+Step 4: Edit the Evaluation Rubric
+You'll be given a pre-existing rubric to revise, expand, and correct. Your final rubric must have at least 15 positive criteria and at least 3 negative criteria.
+
+Step 5: Submit
+Once your prompt and rubric meet all requirements, submit your task on the annotation platform.
+
+Step 6: Check Reviewer Feedback
+After submission, your task will be reviewed. You can look up your Task ID in the Feedback Sheet to see anonymous reviewer feedback.
+
+TASK TIME CAP
+-------------
+Each task has a 1-hour time cap. You are only paid for up to 1 hour per task.
+We expect most tasks to take 30–45 minutes on average. Work efficiently to complete tasks within the time limit.
+
+
+================================================================================
+ONBOARDING CHECKLIST
+================================================================================
+
+Complete these steps before you begin creating tasks. Take your time to understand the material — the assessment only allows one attempt.
+
+STEPS TO COMPLETE
+-----------------
+1. Review the instructions on this website and complete the Google Form assessment
+   - The Google Form link was included in your invitation email
+   - Free response format, manually graded
+   - The assessment is unpaid
+
+2. You'll receive feedback on whether you passed
+   - If you pass, proceed to the next step
+
+3. Go to Project Shopping on the Annotation Platform
+   - Use the link above or from your invitation email
+
+4. Complete the project contract
+   Note: If you are not US-based, the contract step may fail. Please reach out via Discord to get your contract.
+
+5. Create your first task
+   - This is paid!
+
+6. If your task receives a 4/5 or higher rating
+   - You're unthrottled and can work full time!
+
+IMPORTANT: ASSESSMENT INFO
+--------------------------
+The assessment is a free response Google Form (link in your invitation email) that will be manually graded. Make sure you've thoroughly reviewed all the training materials before attempting — you can reference them during the assessment. You'll receive feedback on whether you passed.
+
+TASK TIME CAP
+-------------
+Each task has a 1-hour time cap — you are only paid for up to 1 hour per task. We expect most tasks to take 30–45 minutes on average. Work efficiently to stay within the time limit.
+
+NEED HELP?
+----------
+All project communication happens through Discord. If you have questions about the onboarding process, reach out via Discord after receiving your project invite.
+
+
+================================================================================
+REVIEWER INSTRUCTIONS
+================================================================================
+
+Reviewers are the final checkpoint for quality. Your contributions directly shape the dataset that trains AI shopping assistants.
+
+WHAT REVIEWERS DO
+-----------------
+- Ensure Quality Standards: You are the final safeguard before the task becomes training data.
+- Correct the Task: There is no revision step. If fixable in under 30 minutes, you fix it yourself.
+- Add Constructive Feedback: Fellows don't see your inline edits—they only see your written notes.
+- Rate Before Editing: Provide a 1–5 quality rating before making any edits.
+
+REVIEW WORKFLOW
+---------------
+Attempter (Creates task) → Review Round 1 (Fixes issues, rates Attempt) → Review Round 2 (Reviews R1, rates R1) → Approved (Becomes training data)
+
+Role Flexibility: Reviewers are not "above" Attempters. You may be doing only reviewing, only attempting, or a mix of both. Roles shift based on accuracy, attention to detail, and quality of feedback.
+
+HOW TO ACCESS & CLAIM TASKS
+---------------------------
+1. Go to the Annotation Dashboard
+2. In the top-left you'll see:
+   - My Tasks — tasks you created or are reviewing
+   - Available Tasks — tasks you can claim
+3. Claim a task from Available Tasks.
+
+You will never be asked to review your own task. If it ever appears, simply skip it.
+
+HOW TO PERFORM A REVIEW
+-----------------------
+1. Read the Entire Task
+   Read the prompt, rubric, and model response completely.
+
+2. Decide on a Quality Rating
+   Before making any edits, decide what quality rating (1–5) you would give this task as submitted. You'll use this rating later in Step 6.
+   This rating must reflect the task as originally submitted, not after your corrections.
+
+3. Fix the Task
+   Correct all issues: prompt errors, rubric errors, missing criteria, wording, weights, atomicity, time-bound issues, ambiguous criteria, inverse pairs, etc.
+
+4. Save Your Changes
+   Click Continue on the rubric screen. Do not skip this—otherwise your work is lost.
+
+5. Approve the Task
+   Once all issues are fixed, click Approve.
+
+6. Add Error Tags
+   Click "Add feedback" next to each block or criterion with errors → Click "Type" on the comment box → Select "Major errors" to access the error tags. Tag ALL errors you identified.
+   
+   Error Tags:
+   - Double Negative: "Does not recommend any laptop that is not lightweight."
+   - Duplicate: "Two criteria testing the same 20-liter capacity."
+   - Inverse: "Positive ≥18\" height vs. Negative <18\" height."
+   - Not measurable: "...with excellent battery life."
+   - Not relevant: "...available in stock right now."
+   - Self-containment: "...matches the user's concerns mentioned above."
+   - Stacked: "...cordless and under 6 lbs and HEPA."
+   - Timelessness: "...top-rated TVs of 2024."
+   - Unclear Wording: "...a moderately sized suitcase."
+
+   Important: In the comment box, always specify the criterion number and describe the issue. For example: "Criterion 4 is a duplicate" or "Criterion 4 did not relate the color black to the dress".
+
+7. Rate the Task (1–5)
+   At the bottom of the task, select your quality rating using the rating you decided in Step 2. This reflects how good the task was before your edits.
+
+8. Leave Feedback (Optional)
+   A feedback field will appear. As long as you've added error tags, this is optional—but a quick summary of changes is encouraged.
+   To skip, just type anything into the field. Your feedback is shared directly with attempters, so be constructive.
+
+9. Submit Task
+   Click "Submit Task" to complete the review. This is required—do not skip this step.
+
+MAJOR ERRORS YOU MUST CATCH
+---------------------------
+These are critical errors that must be identified and fixed:
+- Stacked Criterion: Tests multiple conditions in one item
+- Time-Bound Criterion: Violates the timelessness rule
+- Redundant Criteria: Two criteria test the same thing
+- Missing Criterion: Required +5 or +3 criterion is absent
+- Inaccurate Criterion: Contradicts the prompt or includes false info
+- Not Self-Contained: Requires external context to grade
+- Ambiguous Criterion: Not measurable or open to interpretation
+- Restrictive Criterion: Unnecessarily limits valid answers
+- Incorrect Weight: Weight doesn't reflect importance
+- Incomplete Rubric: Fewer than 15 positive or 3 negative criteria
+- Positive/Negative Inverse: Negative is exact opposite of positive
+
+MINOR ERRORS
+------------
+These don't break the task but should be fixed:
+- Criterion doesn't start with action (i.e. "Recommends at least one product")
+- Prompt doesn't correctly implement the use case
+- Minor grammar or wording mistakes
+- Incorrect categorization label
+
+ESCALATING UNSALVAGEABLE TASKS
+------------------------------
+If you come across a task that is really bad—either the prompt is fundamentally flawed, or the rubric is in such poor shape that it cannot be salvaged—you should escalate it.
+
+⚠️ You cannot edit prompts
+Reviewers currently cannot modify prompts. If the prompt itself is flawed (contradictory, unrealistic, too simple, etc.), you must escalate the task—even if the rubric is acceptable.
+
+⚠️ Only escalate rubrics if in a DIRE state
+For rubric issues, escalation is reserved for tasks that would take significantly longer than 30 minutes to fix, or where the rubric is so flawed that fixing it would essentially mean creating a new one from scratch.
+
+How to Escalate:
+1. Click the three dots (⋮) at the top right of the screen
+2. Select "Report task"
+3. Choose "Escalation"
+4. Add a note explaining why you're escalating (e.g., "Prompt is fundamentally flawed—asks for contradictory requirements" or "Rubric has 12+ major errors and would need complete rewrite")
+5. Click "Skip" at the top right to move on to the next task
+
+RATING SCALE (1–5)
+------------------
+5 - Amazing
+Needs 0–1 minutes of edits. Perfect rubric: atomic, measurable, unambiguous. Approve immediately. Flag as exceptional work.
+
+4 - Good
+Needs <10 minutes of edits. Strong structure, small mistakes. Approve after light edits.
+
+3 - OK
+Needs 10–25 minutes. Clearly good effort but enough issues to require editing. Approve after making fixes.
+
+2 - Bad
+Would take 45+ minutes to edit. Clear misunderstanding or major structural problems. Reject (archive), give extensive feedback, flag for SPL follow-up.
+
+1 - Very Bad
+Requires complete rewrite. Low effort or spam. Under 10 rubric items. Archive and recommend offboarding.
+
+HOW REVIEWER QUALITY IS EVALUATED
+---------------------------------
+We track:
+✓ Your 1–5 ratings given in R2
+✓ How often R2 reviewers must fix your edits
+✓ Number of major rubric errors you miss
+✓ Quality of written feedback
+
+FINAL TIPS FOR REVIEWERS
+------------------------
+- Be Decisive: If it's broken, fix it.
+- Be Kind: Fellows are learning. Provide feedback you wish you'd receive.
+- Be Precise: Vague feedback does not help anyone improve.
+- Be Consistent: The same error should trigger the same correction every time.
+
+Aim for perfection. Tasks become training data—they must be flawless.
+
+
+================================================================================
+PAY INFORMATION
+================================================================================
+
+Learn how pay is tracked, processed, and when you can expect to receive payment for your work.
+
+PAY SCHEDULE
+------------
+Pay is sent weekly on Wednesdays after 6pm Pacific Time for the previous Monday–Sunday work period.
+
+WHEN DOES PAY START?
+--------------------
+The assessment is not paid. Your pay begins with your first task submission after passing the assessment.
+You will be throttled (limited on task submissions) until your first task receives a 4/5 or higher rating from the reviewer. Once unthrottled, you can work full time.
+
+TASK TIME CAP
+-------------
+Each task has a 1-hour time cap. You are only paid for up to 1 hour per task, regardless of how long you spend on it.
+Expected time: Most tasks should take 30–45 minutes on average. Work efficiently to complete tasks well within the time limit. The time cap may change in the future.
+
+HOW PAY IS TRACKED
+------------------
+Pay is tracked automatically through the task timer. When you start a task, the timer begins counting. Your time spent on each task (up to 1 hour max) is recorded and used to calculate your pay.
+
+PAY DISPUTES
+------------
+If your pay isn't what you expected, you can submit a dispute through the Pay Dispute Form.
+
+SUMMARY
+-------
+- Weekly: Payment Frequency
+- Wed 6PM: Pacific Time
+- Mon–Sun: Pay Period
+
+NEED HELP?
+----------
+All communication happens through Discord. When you're invited to the project, you'll receive a Discord invite email. If you don't have Discord access, reply to the welcome email for assistance.
+
+
+================================================================================
+EXAMPLES - ERROR EXAMPLES
+================================================================================
+
+1. Creating Criteria For Implied Requirements
+Error Mode: Improper Criteria
+
+Prompt: "I'm looking for a new house for myself and my wife and two kids. Since there are four of us, the house should have at least four bedrooms and three bathrooms. The square footage should be over 3200, as we like to host parties and get-togethers and want a good amount of space. The lot size should be at least 6000 square feet, giving us enough space to grow a garden and also have outdoor seating and leisure areas. We want to be the first owners of this new home, so it should have been built within the last year or two. The house should be classified as a single-family residential building. Since we have two cars, the garage and driveway should have space for at least two cars. However, we would like more than two cars worth of garage space so that we can have a game room inside it. Since we will most likely be living in a nicer neighborhood, we are happy to pay an HOA fee of up to $320 per month. My wife comes from a hot, humid climate, while the town I grew up in is cold, so we would like the heating and cooling to have controls in each room, since we often disagree on what interior temperature is comfortable. The construction type of the house should be type V, or wood-framed construction, which is standard for houses. We have appliances from our old house that we are happy to bring, so the house need not come with appliances."
+
+Criteria: "Recommends houses that don't come with appliances, since the user is happy to bring their existing appliances to their new residence."
+
+Correction: Remove the criterion.
+
+Rationale: The prompt explicitly states the person doesn't care whether the house comes with appliances or not, so this criterion is inaccurate because there's no evidence to support it.
+
+2. Specifying A Criteria With An Objective - Part 1
+Error Mode: Subjective Criteria
+
+Prompt: [Same house prompt as above]
+
+Criteria: "Recommends houses in a safe neighborhood with low crime rates, good night-time lighting, and good accessibility, since the user has two kids."
+
+Correction: "Recommends houses that have a violent crime rate under 200 per 100,000."
+
+Rationale: A "safe" neighborhood is subjective and will be evaluated on how the grader views safety. Instead, we should frame this around an objective metric of crime.
+
+3. Specifying A Criteria With An Objective - Part 2
+Error Mode: Subjective Criteria
+
+Prompt: "I live in North Carolina and like to grow my own fruits and vegetable. The earth here is mainly made of clay. I am looking to find a second-hand powered tiller to help break the clay and mix with compost. By the way, my backyard has a slope."
+
+Criteria: "Recommends tiller that can handle tough clay in North Carolina."
+
+Correction: "Recommends a tiller with a minimum engine displacement of 200 cc or greater."
+
+Rationale: This criterion is too subjective – what's considered a tiller that can handle "tough clay"? The statement must be an objective feature of the tiller itself.
+
+If the criterion instead stated: "Recommends a tiller that can handle clay more resistant than 300 PSI" this would still be wrong. Why? Because this is still subjective...what kind of tiller can handle that type of clay? It doesn't say.
+
+4. Using 'Available' Instead of 'Made In' for Sizing
+Error Mode: Timelessness
+
+Prompt: "I'm going to a holiday party with some friends in Manhattan and I need to find a dress that's beautiful, memorable, but also sophisticated. I was thinking it should look similar to my favorite movie look of all time: the black, Chantilly lace (with silk underlay) cocktail dress ensemble by Givenchy that Audrey Hepburn wears in the 1966 movie \"How to Steal a Million.\" I have a slender figure like Hepburn, and I'm a size US 4. I'm wondering if you can suggest some black dresses for me with a shift silhouette, with lace or lace detail, which looks similar to the dress in the movie?"
+
+Criteria: "Each recommended dress is available in size US 4 as indicated in the answer text or on the linked product page."
+
+Correction: Replace "available in" with "made in."
+
+Rationale: The word "available" is not timeless—what if the item is out of stock? Stock availability changes constantly. However, "made in" IS timeless because it refers to whether the manufacturer produces that size at all, which is a permanent product attribute.
+
+
+================================================================================
+EXAMPLES - GOLDEN EXAMPLES
+================================================================================
+
+GOLDEN EXAMPLE 1: Sports, Outdoors & Fitness
+Use Case: First-time buyer guidance
+Attributes: Beginner, Gravel/Road, Sizing, Safety, Storage, Hydration
+
+Prompt: "I'm looking to get into biking so I can get out on the trails around Boulder with my friends. I've never had a bike before, maybe just when I was a kid with training wheels but I don't remember. I don't know anything about picking a bike. My friends mostly go on roads and gravel, they said height matters for sizing so I'm 5'2, I need something safe and they also said I'll need to be able to carry stuff like my phone, keys, snacks, and a bunch of water since the climate here is really dry and I'll probably get dehydrated really fast. Can you recommend a couple of bikes to get me started?"
+
+Rubric (27 Criteria):
+Positive:
+1. (+5) All website links are valid and lead to product-specific pages
+2. (+3) Provides at least two distinct bicycle model recommendations
+3. (+3) States a numerical frame size in centimeters or inches for each recommended bicycle
+4. (+3) Includes at least one recommended bicycle size with an effective top tube length between 495 mm and 525 mm
+5. (+3) Includes at least one recommended bicycle with a standover height value of 730 mm or less
+6. (+3) Specifies the frame material for each recommended bicycle
+7. (+3) States the stock tire width in millimeters for each recommended bicycle
+8. (+3) Includes at least one recommended bicycle with hydraulic disc brakes
+9. (+3) Specifies rotor diameters for at least one recommended bicycle
+10. (+3) States the presence of threaded M5 mounts for a rear rack on at least one recommended bicycle
+11. (+3) States the presence of at least two water bottle cage mounting points on the frame of at least one recommended bicycle
+12. (+3) Recommends at least one on-bike storage bag with volume of at least 1.0 liter for carrying small items
+13. (+3) Recommends a phone mount able to hold a phone of at least 158 mm height and 78 mm width
+14. (+3) Recommends front and rear lights with at least 300 lumens front and 30 lumens rear
+15. (+1) Provides the weight of at least one recommended bicycle expressed in kilograms or pounds
+16. (+1) States that at least one recommended bicycle has reach-adjustable brake levers
+17. (+1) Specifies handlebar width for at least one recommended bicycle as 640 mm or less for flat bars or 400 mm or less for drop bars
+18. (+1) States that at least one recommended bicycle includes fender mounting points
+19. (+1) Includes at least one recommended bicycle with a quick-release seatpost clamp
+27. (+5) Identifies the full model names for each recommendation
+
+Negative:
+20. (-5) Recommends any bicycle with a single-speed drivetrain without derailleurs or internal gearing
+21. (-3) Recommends any bicycle equipped with rim brakes instead of disc brakes
+22. (-3) Recommends any bicycle lacking any water bottle cage mounting points on the frame
+23. (-3) Recommends any bicycle with maximum tire clearance less than 35 mm for 700c wheels
+24. (-1) Recommends any flat handlebar wider than 720 mm
+25. (-1) Recommends any phone mount that relies solely on adhesive pads without a clamp or strap
+26. (-3) Recommends any bicycle described as a road bike
+
+
+GOLDEN EXAMPLE 2: Consumer Electronics
+Use Case: Similar or look-alike products
+Attributes: Tablet, Mobile, Cellular, Large Screen, Durable, Water Resistant
+
+Prompt: "I am a highly mobile business person who needs to be able to access websites and webapps while on the move. I am looking for a tablet that is similar to the Samsung Galaxy Tab S10 for myself. I am frequently on the train or airport and want to avoid having to pull out my laptop. But I need something bigger than my phone. I have large fingers that often cause problems with small keypads. The features I like about the Samsung Galaxy Tab S10 are that it has a large screen size and a long battery life. I would love something impact and water resistant, and ideally something that can connect to internet via my Verizon cellular service. I want something similar in processor speed which is Exynos 1580 processor. I am willing to accept slightly lower performance for cost savings. Can you please find suggestions for comparable products?"
+
+Rubric (31 Criteria):
+[See full criteria list in app]
+
+
+GOLDEN EXAMPLE 3: Apparel & Accessories
+Use Case: First-time buyer guidance
+Attributes: Wool, Button-up, Natural Fibers, Local Store, Men's Jacket, Bohemian Style
+
+Prompt: "I am looking for a medium-weight, button-up jacket for my son to wear around the house in the winter months. We like to keep our house on the cooler side because we feel it is healthier. So the thermostat is usually set to 67 Fahrenheit during the day and 65 at night. I'd like the jacket to be suitable for cool fall and spring days outside and it should be a bit more dressy than a hoodie. His style is a little bit hippie/bohemian and he likes his clothing to be loose-fitting. He prefers natural fibers and loves anything made of wool. He has dark blond hair and brown eyes and is 5'10.\" We prefer to support local business so it would be great to be able to pick up the jacket from a store within a 20 minutes drive from Port Jefferson, NY. Can you please recommend some jackets?"
+
+Rubric (29 Criteria):
+[See full criteria list in app]
+
+
+GOLDEN EXAMPLE 4: Furniture
+Use Case: Problem-solution shopping
+Attributes: Standing Desk, Height Adjustable, Quiet, Durable, Stable, Home Office
+
+Prompt: "I need a new desk to use in my guest bedroom turned home office. My neck hurts whenever I have to look down at my laptop for more than 1 hour, so I'd want the desk to be height adjustable to my comfort in both standing and seated positions. I'll be working late hours sometimes and need to avoid waking my wife when I'm making adjustments. I don't want anything too industrial looking, but the table needs to be really strong and durable so I can place all my books and important documents on there without me worrying about it breaking or tipping the table over. I like to keep a large tumbler of water and hot coffee on the table, so it cannot be too wobbly on our textured carpet floors. Can you tell me which desk would be the best for that?"
+
+Rubric (29 Criteria):
+[See full criteria list in app]
+
+
+GOLDEN EXAMPLE 5: Pet Supplies
+Use Case: Purchasing a Gift
+Attributes: Dog Toy, Durable, Chew-proof, Safe, High Energy Dog, No Strings
+
+Prompt: "I'm looking to buy a present for my friends' dog. They got her a few months ago but they just moved back to town and she's turning one so this is the first time I'm meeting her. My friends have been complaining because they haven't been able to find a toy that she can't destroy. She's a border collie cattle dog mix, about 40 lbs and is super high energy. She also has a habit of picking strings off of toys which I heard can be super dangerous for dogs. Can you give me a couple of suggestions for toys I can get her?"
+
+Rubric (20 Criteria):
+[See full criteria list in app]
+
+================================================================================
+END OF DOCUMENT
+================================================================================
