@@ -3,9 +3,17 @@ import { PageHeader } from "@/components/PageHeader";
 import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { CheckCircle, XCircle, AlertTriangle, FileCheck, Palette, FileSpreadsheet, Presentation, Shield, Quote, Info } from "lucide-react";
 
 const BankerBibleChecklist = () => {
+  const navigationItems = [
+    { id: "overview", label: "Universal Module Overview" },
+    { id: "section-a", label: "Section A: FUNDAMENTAL" },
+    { id: "section-b", label: "Section B: QUALITY FACTORS" },
+    { id: "example-criteria", label: "Example Criteria" },
+    { id: "quick-reference", label: "Quick Reference Checklist" },
+  ];
   return (
     <Layout>
       <PageHeader 
@@ -14,11 +22,14 @@ const BankerBibleChecklist = () => {
         description="Ensure every rubric accounts for these Banker Bible formatting and compliance requirements." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-3xl mx-auto space-y-8">
-          
-          {/* Overview */}
-          <ContentCard className="border-2 border-primary/30">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-3xl mx-auto space-y-8">
+            
+            {/* Overview */}
+            <ContentCard id="overview" className="border-2 border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Universal Module: Banker Bible Compliance</h2>
             <div className="space-y-4">
               <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
@@ -36,8 +47,8 @@ const BankerBibleChecklist = () => {
             </div>
           </ContentCard>
 
-          {/* Section A: FUNDAMENTAL */}
-          <ContentCard className="border-2 border-destructive/50">
+            {/* Section A: FUNDAMENTAL */}
+            <ContentCard id="section-a" className="border-2 border-destructive/50">
             <div className="flex items-center gap-2 mb-4">
               <Shield className="h-6 w-6 text-destructive" />
               <h2 className="font-serif text-xl font-bold text-foreground">Section A: FUNDAMENTAL (Gating / Must Pass)</h2>
@@ -201,8 +212,8 @@ const BankerBibleChecklist = () => {
             </div>
           </ContentCard>
 
-          {/* Section B: QUALITY FACTORS */}
-          <ContentCard className="border-2 border-yellow-500/50">
+            {/* Section B: QUALITY FACTORS */}
+            <ContentCard id="section-b" className="border-2 border-yellow-500/50">
             <div className="flex items-center gap-2 mb-4">
               <AlertTriangle className="h-6 w-6 text-yellow-600" />
               <h2 className="font-serif text-xl font-bold text-foreground">Section B: QUALITY FACTORS (Scoring Considerations)</h2>
@@ -322,8 +333,8 @@ const BankerBibleChecklist = () => {
             </div>
           </ContentCard>
 
-          {/* Example Criteria Section */}
-          <ContentCard className="border-2 border-primary/30">
+            {/* Example Criteria Section */}
+            <ContentCard id="example-criteria" className="border-2 border-primary/30">
             <div className="flex items-center gap-2 mb-4">
               <Quote className="h-6 w-6 text-primary" />
               <h2 className="font-serif text-xl font-bold text-foreground">Example Criteria: Banker Bible Compliance</h2>
@@ -528,8 +539,8 @@ const BankerBibleChecklist = () => {
             </div>
           </ContentCard>
 
-          {/* Quick Reference Checklist */}
-          <ContentCard className="border-2 border-chart-1/30">
+            {/* Quick Reference Checklist */}
+            <ContentCard id="quick-reference" className="border-2 border-chart-1/30">
             <div className="flex items-center gap-2 mb-4">
               <Palette className="h-6 w-6 text-chart-1" />
               <h2 className="font-serif text-xl font-bold text-foreground">Quick Reference: Rubric Coverage Checklist</h2>
@@ -574,7 +585,8 @@ const BankerBibleChecklist = () => {
             </InfoBox>
           </ContentCard>
 
-          <PageNavigation />
+            <PageNavigation />
+          </div>
         </div>
       </div>
     </Layout>

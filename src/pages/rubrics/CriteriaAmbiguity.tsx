@@ -3,9 +3,18 @@ import { PageHeader } from "@/components/PageHeader";
 import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { HelpCircle, CheckCircle, XCircle, Target, Users, ArrowRight } from "lucide-react";
 
 const CriteriaAmbiguity = () => {
+  const navigationItems = [
+    { id: "definition", label: "What Makes a Criterion Ambiguous?" },
+    { id: "two-reviewer-test", label: "The Two-Reviewer Test" },
+    { id: "words-to-avoid", label: "Words That Signal Ambiguity" },
+    { id: "how-to-measurable", label: "How to Make Criteria Measurable" },
+    { id: "examples", label: "Improved Examples" },
+    { id: "key-takeaway", label: "Key Takeaway" },
+  ];
   const vagueWords = [
     { word: "good", replacement: "specify measurable attributes (size, axes, outputs, labels)" },
     { word: "appropriate", replacement: "define exact values or ranges" },
@@ -75,11 +84,14 @@ const CriteriaAmbiguity = () => {
         description="Criteria must use explicit, objective details. If two reviewers could disagree, it's not measurable." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-4xl mx-auto space-y-8">
 
-          {/* Definition */}
-          <ContentCard className="border-primary/30">
+            {/* Definition */}
+            <ContentCard id="definition" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">What Makes a Criterion Ambiguous?</h2>
             <p className="text-muted-foreground mb-4">
               An <strong>ambiguous criterion</strong> uses subjective or vague language that can't be evaluated objectively. 
@@ -93,8 +105,8 @@ const CriteriaAmbiguity = () => {
             </div>
           </ContentCard>
 
-          {/* The Two-Reviewer Test */}
-          <ContentCard className="border-amber-500/30 bg-amber-500/5">
+            {/* The Two-Reviewer Test */}
+            <ContentCard id="two-reviewer-test" className="border-amber-500/30 bg-amber-500/5">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <Users className="h-5 w-5 text-amber-500" />
               The Two-Reviewer Test
@@ -112,8 +124,8 @@ const CriteriaAmbiguity = () => {
             </p>
           </ContentCard>
 
-          {/* Words to Avoid */}
-          <ContentCard>
+            {/* Words to Avoid */}
+            <ContentCard id="words-to-avoid">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Words That Signal Ambiguity (Rewrite These)</h2>
             <p className="text-sm text-muted-foreground mb-4">
               These words usually require tightening:
@@ -132,8 +144,8 @@ const CriteriaAmbiguity = () => {
             </div>
           </ContentCard>
 
-          {/* How to Make Measurable */}
-          <ContentCard>
+            {/* How to Make Measurable */}
+            <ContentCard id="how-to-measurable">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <Target className="h-5 w-5 text-primary" />
               How to Make Criteria Measurable
@@ -169,8 +181,8 @@ const CriteriaAmbiguity = () => {
             </div>
           </ContentCard>
 
-          {/* Examples Section */}
-          <section>
+            {/* Examples Section */}
+            <section id="examples">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Improved Examples</h2>
             <p className="text-muted-foreground mb-6">
               Below are examples rewritten in the same spirit as your "gold" rubric: specific, banker-grade, and verifiable.
@@ -207,8 +219,8 @@ const CriteriaAmbiguity = () => {
             </div>
           </section>
 
-          {/* Key Takeaway */}
-          <ContentCard className="bg-primary/5 border-primary/30">
+            {/* Key Takeaway */}
+            <ContentCard id="key-takeaway" className="bg-primary/5 border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Key Takeaway</h2>
             <p className="text-muted-foreground">
               Avoid <strong>"good/appropriate/professional/correct"</strong> unless you immediately define it with measurable requirements. 
@@ -217,8 +229,9 @@ const CriteriaAmbiguity = () => {
             </p>
           </ContentCard>
 
-          <PageNavigation />
+            <PageNavigation />
 
+          </div>
         </div>
       </div>
     </Layout>

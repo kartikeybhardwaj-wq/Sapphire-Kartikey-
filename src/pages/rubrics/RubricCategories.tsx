@@ -3,9 +3,15 @@ import { PageHeader } from "@/components/PageHeader";
 import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { FolderOpen, ListChecks, Palette, Calculator, FileCheck, Target, Scale } from "lucide-react";
 
 const RubricCategories = () => {
+  const navigationItems = [
+    { id: "overview", label: "Understanding Categories" },
+    { id: "six-categories", label: "The Six Categories" },
+    { id: "category-mismatch", label: "Avoiding Category Mismatch" },
+  ];
   const categories = [
     {
       icon: ListChecks,
@@ -89,11 +95,14 @@ const RubricCategories = () => {
         description="Rubrics evaluate criteria based on six categories. Each criterion should be assigned to the most appropriate category." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-4xl mx-auto space-y-8">
 
-          {/* Overview */}
-          <ContentCard className="border-primary/30">
+            {/* Overview */}
+            <ContentCard id="overview" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Understanding Categories</h2>
             <p className="text-muted-foreground mb-4">
               Every criterion in your rubric should be assigned to one of six categories. This helps organize the rubric 
@@ -110,8 +119,8 @@ const RubricCategories = () => {
             </div>
           </ContentCard>
 
-          {/* Categories */}
-          <section>
+            {/* Categories */}
+            <section id="six-categories">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-6">The Six Categories</h2>
             <div className="space-y-6">
               {categories.map((category, index) => {
@@ -142,8 +151,8 @@ const RubricCategories = () => {
             </div>
           </section>
 
-          {/* Category Mismatch Warning */}
-          <ContentCard>
+            {/* Category Mismatch Warning */}
+            <ContentCard id="category-mismatch">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Avoiding Category Mismatch</h2>
             <p className="text-muted-foreground mb-4">
               A common error is assigning criteria to the wrong category. This makes it harder to analyze model performance.
@@ -179,8 +188,9 @@ const RubricCategories = () => {
             </ul>
           </InfoBox>
 
-          <PageNavigation />
+            <PageNavigation />
 
+          </div>
         </div>
       </div>
     </Layout>

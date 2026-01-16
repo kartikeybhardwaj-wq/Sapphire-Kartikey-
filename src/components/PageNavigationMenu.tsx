@@ -64,14 +64,21 @@ export const PageNavigationMenu = ({ items, className }: PageNavigationMenuProps
   return (
     <aside
       className={cn(
-        "hidden lg:block fixed left-64 top-14 bottom-0 w-64 flex-shrink-0 border-r border-border bg-background/95 backdrop-blur-sm p-6 space-y-2 overflow-y-auto z-30",
+        "hidden lg:block flex-shrink-0 border-r border-border bg-background/95 backdrop-blur-sm z-30 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto",
         className
       )}
+      style={{
+        width: 'var(--navigation-menu-width)',
+        maxWidth: 'var(--navigation-menu-width)'
+      }}
     >
-      <h3 className="font-semibold text-foreground mb-4 text-xs uppercase tracking-wider text-muted-foreground">
-        Page Sections
-      </h3>
-      <nav className="space-y-1">
+      <div className="p-6">
+        <h3 className="font-semibold text-foreground mb-4 text-xs uppercase tracking-wider text-muted-foreground bg-background/95 backdrop-blur-sm sticky top-0 z-10 py-2 -mt-2">
+          Page Sections
+        </h3>
+        <nav 
+          className="space-y-1"
+        >
         {items.map((item) => {
           const isActive = activeId === item.id;
           const itemIndex = items.findIndex((i) => i.id === item.id);
@@ -114,7 +121,8 @@ export const PageNavigationMenu = ({ items, className }: PageNavigationMenuProps
             </button>
           );
         })}
-      </nav>
+        </nav>
+      </div>
     </aside>
   );
 };

@@ -3,9 +3,20 @@ import { PageHeader } from "@/components/PageHeader";
 import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { Layers, CheckCircle, XCircle, AlertTriangle, ArrowRight, Check, X } from "lucide-react";
 
 const CriteriaStacked = () => {
+  const navigationItems = [
+    { id: "definition", label: "What Is a Stacked Criterion?" },
+    { id: "how-to-spot", label: "How to Spot Stacked Criteria" },
+    { id: "the-fix", label: "The Fix: Make It Atomic" },
+    { id: "examples", label: "Examples: Stacked → Atomic" },
+    { id: "key-distinction", label: "The Key Distinction" },
+    { id: "more-examples", label: "More Examples" },
+    { id: "checklist", label: "Practical Checklist" },
+    { id: "summary", label: "Summary" },
+  ];
   const stackedExamples = [
     {
       title: "Example 1: DCF Core Mechanics",
@@ -91,11 +102,14 @@ const CriteriaStacked = () => {
         description="A stacked criterion tests multiple requirements in a single item. Learn to identify and split them for fair evaluation." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-4xl mx-auto space-y-8">
 
-          {/* Definition */}
-          <ContentCard className="border-primary/30">
+            {/* Definition */}
+            <ContentCard id="definition" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">What Is a Stacked Criterion?</h2>
             <p className="text-muted-foreground mb-4">
               A <strong>stacked criterion</strong> tries to test more than one measurable requirement at the same time. 
@@ -110,8 +124,8 @@ const CriteriaStacked = () => {
             </div>
           </ContentCard>
 
-          {/* How to Spot */}
-          <ContentCard>
+            {/* How to Spot */}
+            <ContentCard id="how-to-spot">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <AlertTriangle className="h-5 w-5 text-amber-500" />
               How to Spot Stacked Criteria
@@ -176,8 +190,8 @@ const CriteriaStacked = () => {
             </InfoBox>
           </ContentCard>
 
-          {/* The Fix */}
-          <ContentCard>
+            {/* The Fix */}
+            <ContentCard id="the-fix">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">The Fix: Make It Atomic</h2>
             <p className="text-muted-foreground mb-4">
               Each criterion should test <strong>one measurable thing</strong>.
@@ -200,8 +214,8 @@ const CriteriaStacked = () => {
             </div>
           </ContentCard>
 
-          {/* Examples Section */}
-          <section>
+            {/* Examples Section */}
+            <section id="examples">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-6">Examples: Stacked → Atomic</h2>
             <div className="space-y-6">
               {stackedExamples.map((example, index) => (
@@ -240,8 +254,8 @@ const CriteriaStacked = () => {
             </div>
           </section>
 
-          {/* Key Distinction Section */}
-          <section className="pt-8 border-t border-border">
+            {/* Key Distinction Section */}
+            <section id="key-distinction" className="pt-8 border-t border-border">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-2">The Key Distinction</h2>
             <p className="text-lg text-muted-foreground mb-6">"Looks Stacked" vs "Actually One Requirement"</p>
             
@@ -407,8 +421,8 @@ const CriteriaStacked = () => {
             </ContentCard>
           </section>
 
-          {/* More Examples: Allowed vs Not Allowed */}
-          <section>
+            {/* More Examples: Allowed vs Not Allowed */}
+            <section id="more-examples">
             <h2 className="font-serif text-xl font-bold text-foreground mb-6">More Examples: Allowed vs Not Allowed</h2>
             <div className="space-y-4">
               {allowedVsNotAllowedExamples.map((example, index) => (
@@ -474,8 +488,8 @@ const CriteriaStacked = () => {
             </div>
           </section>
 
-          {/* Practical Checklist */}
-          <ContentCard className="border-primary/30">
+            {/* Practical Checklist */}
+            <ContentCard id="checklist" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Practical Checklist Before You Keep Something "Combined"</h2>
             <p className="text-sm text-muted-foreground mb-4">Before deciding not to split, ask:</p>
             <div className="space-y-3">
@@ -501,8 +515,8 @@ const CriteriaStacked = () => {
             </InfoBox>
           </ContentCard>
 
-          {/* Summary */}
-          <ContentCard className="bg-primary/5 border-primary/30">
+            {/* Summary */}
+            <ContentCard id="summary" className="bg-primary/5 border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Summary</h2>
             <ul className="space-y-3 mb-6">
               <li className="flex gap-3 items-start">
@@ -542,8 +556,9 @@ const CriteriaStacked = () => {
             </div>
           </ContentCard>
 
-          <PageNavigation />
+            <PageNavigation />
 
+          </div>
         </div>
       </div>
     </Layout>

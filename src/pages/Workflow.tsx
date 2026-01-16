@@ -59,7 +59,14 @@ const WorkflowPage = () => {
         description="Follow these 8 steps to complete each investment banking task. From choosing your dataset to submitting your final rubric." 
       />
 
-      <div className="container mx-auto px-4 py-8">
+      <div 
+        className="container mx-auto px-4 py-8 w-full"
+        style={{
+          width: '100%',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
+        }}
+      >
         <div className="max-w-5xl mx-auto flex gap-8">
           {/* Step Navigation Sidebar */}
           <StepNavigationSidebar

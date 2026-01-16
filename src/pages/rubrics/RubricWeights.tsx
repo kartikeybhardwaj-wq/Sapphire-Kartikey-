@@ -4,9 +4,16 @@ import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { WeightBadge } from "@/components/WeightBadge";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { Scale, CheckCircle, AlertTriangle, TrendingUp } from "lucide-react";
 
 const RubricWeights = () => {
+  const navigationItems = [
+    { id: "weight-system", label: "Understanding the Weight System" },
+    { id: "weighting-principles", label: "Weighting Principles" },
+    { id: "common-mistakes", label: "Common Weighting Mistakes" },
+    { id: "key-takeaway", label: "Key Takeaway" },
+  ];
   const weightTable = [
     { 
       weight: 10, 
@@ -59,11 +66,14 @@ const RubricWeights = () => {
         description="Each criterion gets a weight that reflects its importance. Learn how to assign weights of 1, 3, 5, or 10 based on impact." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-4xl mx-auto space-y-8">
 
-          {/* Weight System */}
-          <ContentCard className="border-primary/30">
+            {/* Weight System */}
+            <ContentCard id="weight-system" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Understanding the Weight System</h2>
             <p className="text-muted-foreground mb-6">
               Weights reflect how critical each criterion is to the overall quality of the deliverable. 
@@ -93,8 +103,8 @@ const RubricWeights = () => {
             </div>
           </ContentCard>
 
-          {/* Weighting Principles */}
-          <ContentCard>
+            {/* Weighting Principles */}
+            <ContentCard id="weighting-principles">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-primary" />
               Weighting Principles
@@ -125,8 +135,8 @@ const RubricWeights = () => {
           </ContentCard>
 
 
-          {/* Common Mistakes */}
-          <ContentCard>
+            {/* Common Mistakes */}
+            <ContentCard id="common-mistakes">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <AlertTriangle className="h-5 w-5 text-amber-500" />
               Common Weighting Mistakes
@@ -153,15 +163,16 @@ const RubricWeights = () => {
             </div>
           </ContentCard>
 
-          {/* Key Takeaway */}
-          <InfoBox type="info" title="Key Takeaway">
+            {/* Key Takeaway */}
+            <InfoBox id="key-takeaway" type="info" title="Key Takeaway">
             Use weights to reflect banker priorities. Critical financial logic should carry Weight 10, 
             while nice-to-have formatting can be Weight 1. The total weighted score should meaningfully 
             differentiate between good and poor model outputs.
           </InfoBox>
 
-          <PageNavigation />
+            <PageNavigation />
 
+          </div>
         </div>
       </div>
     </Layout>

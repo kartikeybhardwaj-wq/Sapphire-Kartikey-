@@ -24,9 +24,10 @@ const OutputGuide = () => {
         description="Learn how to create ideal deliverables, step-by-step instructions, and understand the error taxonomy." 
       />
 
-      <PageNavigationMenu items={navigationItems} />
-
-      <div className="container mx-auto px-4 py-8 lg:ml-[32rem] pt-4">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-8 pt-4 flex-1 min-w-0">
         <div className="max-w-3xl mx-auto space-y-12">
           {/* Chapter 1: Ideal Deliverable */}
           <ChapterSection id="step-1" chapter={1} title="Ideal Deliverable">
@@ -571,6 +572,7 @@ const OutputGuide = () => {
 
           <PageNavigation />
         </div>
+      </div>
       </div>
     </Layout>
   );

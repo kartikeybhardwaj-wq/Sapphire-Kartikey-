@@ -3,9 +3,18 @@ import { PageHeader } from "@/components/PageHeader";
 import { ContentCard } from "@/components/ContentCard";
 import { InfoBox } from "@/components/InfoBox";
 import { PageNavigation } from "@/components/PageNavigation";
+import { PageNavigationMenu } from "@/components/PageNavigationMenu";
 import { BoxSelect, CheckCircle, XCircle, FileText, Eye, AlertTriangle, Zap, Users, Target } from "lucide-react";
 
 const CriteriaSelfContainment = () => {
+  const navigationItems = [
+    { id: "definition", label: "What Is Self-Containment?" },
+    { id: "why-it-matters", label: "Why Self-Containment Matters" },
+    { id: "additional-requirements", label: "Additional Requirements" },
+    { id: "common-violations", label: "Common Violations" },
+    { id: "examples", label: "Examples" },
+    { id: "quick-rewrite", label: "Quick Rewrite Rule" },
+  ];
   const examples = [
     {
       title: "Example 1: Formatting Preferences",
@@ -60,11 +69,14 @@ const CriteriaSelfContainment = () => {
         description="Each criterion must stand alone. A reader must be able to evaluate it without seeing the prompt, model answer, or other criteria." 
       />
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto space-y-8">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-12 flex-1 min-w-0">
+          <div className="max-w-4xl mx-auto space-y-8">
 
-          {/* Definition */}
-          <ContentCard className="border-primary/30">
+            {/* Definition */}
+            <ContentCard id="definition" className="border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">What Is Self-Containment?</h2>
             <p className="text-muted-foreground mb-4">
               A <strong>self-contained criterion</strong> includes all information needed to evaluate it. 
@@ -81,8 +93,8 @@ const CriteriaSelfContainment = () => {
             </div>
           </ContentCard>
 
-          {/* Why It Matters */}
-          <ContentCard>
+            {/* Why It Matters */}
+            <ContentCard id="why-it-matters">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4 flex items-center gap-2">
               <Eye className="h-5 w-5 text-primary" />
               Why Self-Containment Matters
@@ -118,8 +130,8 @@ const CriteriaSelfContainment = () => {
             </div>
           </ContentCard>
 
-          {/* Additional Requirements */}
-          <section className="rounded-xl border-2 border-amber-500/50 bg-amber-500/5 p-6 space-y-6">
+            {/* Additional Requirements */}
+            <section id="additional-requirements" className="rounded-xl border-2 border-amber-500/50 bg-amber-500/5 p-6 space-y-6">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-amber-500/20 text-amber-600">
                 <AlertTriangle className="h-6 w-6" />
@@ -213,8 +225,8 @@ const CriteriaSelfContainment = () => {
             </ContentCard>
           </section>
 
-          {/* Common Violations */}
-          <ContentCard>
+            {/* Common Violations */}
+            <ContentCard id="common-violations">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Common Violations (Non-Self-Contained Language)</h2>
             <p className="text-sm text-muted-foreground mb-4">
               Avoid criteria that rely on missing context, such as:
@@ -232,8 +244,8 @@ const CriteriaSelfContainment = () => {
             </InfoBox>
           </ContentCard>
 
-          {/* Examples Section */}
-          <section>
+            {/* Examples Section */}
+            <section id="examples">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-6">Examples</h2>
             <div className="space-y-6">
               {examples.map((example, index) => (
@@ -272,8 +284,8 @@ const CriteriaSelfContainment = () => {
             </div>
           </section>
 
-          {/* Quick Rewrite Rule */}
-          <ContentCard className="bg-primary/5 border-primary/30">
+            {/* Quick Rewrite Rule */}
+            <ContentCard id="quick-rewrite" className="bg-primary/5 border-primary/30">
             <h2 className="font-serif text-xl font-bold text-foreground mb-4">Quick Rewrite Rule</h2>
             <p className="text-muted-foreground mb-4">
               If your criterion references something outside itself (prompt, input file, template, "above"), rewrite it so it states:
@@ -297,8 +309,9 @@ const CriteriaSelfContainment = () => {
             </InfoBox>
           </ContentCard>
 
-          <PageNavigation />
+            <PageNavigation />
 
+          </div>
         </div>
       </div>
     </Layout>

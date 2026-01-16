@@ -23,15 +23,6 @@ export const StepNavigationSidebar = ({
   skippedSteps = [],
   onStepClick,
 }: StepNavigationSidebarProps) => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 100);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const getStepStatus = (stepNumber: number) => {
     if (completedSteps.includes(stepNumber)) return "completed";
@@ -61,14 +52,16 @@ export const StepNavigationSidebar = ({
   return (
     <aside
       className={cn(
-        "w-64 flex-shrink-0 border-r border-border bg-muted/30 p-6 space-y-2 transition-all",
-        isSticky && "sticky top-20 max-h-[calc(100vh-5rem)] overflow-y-auto"
+        "w-64 flex-shrink-0 border-r border-border bg-muted/30 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto"
       )}
     >
-      <h3 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">
-        Workflow Steps
-      </h3>
-      <nav className="space-y-1">
+      <div className="p-6">
+        <h3 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide bg-muted/30 sticky top-0 z-10 py-2 -mt-2 backdrop-blur-sm">
+          Workflow Steps
+        </h3>
+        <nav 
+          className="space-y-1"
+        >
         {steps.map((step) => {
           const status = getStepStatus(step.number);
           return (
@@ -132,7 +125,8 @@ export const StepNavigationSidebar = ({
             </button>
           );
         })}
-      </nav>
+        </nav>
+      </div>
     </aside>
   );
 };

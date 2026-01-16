@@ -8,7 +8,14 @@ interface PageHeaderProps {
 
 export const PageHeader = ({ icon: Icon, title, description }: PageHeaderProps) => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-primary to-secondary py-16 md:py-20">
+    <div 
+      className="relative overflow-hidden bg-gradient-to-br from-primary to-secondary py-16 md:py-20 w-full"
+      style={{
+        width: '100%',
+        maxWidth: '100%',
+        boxSizing: 'border-box'
+      }}
+    >
       {/* Subtle dot pattern overlay */}
       <div 
         className="absolute inset-0 opacity-[0.07]"
@@ -20,8 +27,8 @@ export const PageHeader = ({ icon: Icon, title, description }: PageHeaderProps) 
       {/* Subtle gradient overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
       
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-3xl">
+      <div className="w-full px-4 relative" style={{ maxWidth: '100%', boxSizing: 'border-box' }}>
+        <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/20 backdrop-blur-sm">
               <Icon className="h-6 w-6" />

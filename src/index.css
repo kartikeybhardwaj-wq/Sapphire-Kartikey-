@@ -10,6 +10,13 @@
 
 @layer base {
   :root {
+    /* Layout Variables */
+    --sidebar-width: 16rem; /* 256px - Main AppSidebar */
+    --sidebar-width-icon: 3rem; /* 48px - Collapsed sidebar */
+    --navigation-menu-width: 16rem; /* 256px - PageNavigationMenu */
+    --header-height: 3.5rem; /* 56px (h-14) - Header height */
+    --total-sidebar-width: calc(var(--sidebar-width) + var(--navigation-menu-width)); /* 512px when both visible */
+
     --background: 220 30% 98%;
     --foreground: 222 47% 11%;
 
@@ -164,9 +171,20 @@
     scroll-behavior: smooth;
   }
 
+  body {
+    box-sizing: border-box;
+  }
+
   /* Better focus states */
   *:focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  /* Ensure all elements respect box-sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 }
 
@@ -204,6 +222,21 @@
     }
     100% {
       box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+  }
+
+  /* Page content wrapper - accounts for sidebar and navigation menu */
+  .page-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1024px) {
+    .page-content-wrapper {
+      margin-left: var(--navigation-menu-width);
+      width: calc(100% - var(--navigation-menu-width));
+      max-width: calc(100% - var(--navigation-menu-width));
     }
   }
 }

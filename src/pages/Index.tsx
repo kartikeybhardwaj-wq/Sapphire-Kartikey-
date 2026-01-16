@@ -16,7 +16,14 @@ const Index = () => {
         description="Create high-quality investment banking tasks and evaluation rubrics for AI model training."
       />
 
-      <div className="container mx-auto px-4 py-12">
+      <div 
+        className="container mx-auto px-4 py-12 w-full"
+        style={{
+          width: '100%',
+          maxWidth: '100%',
+          boxSizing: 'border-box'
+        }}
+      >
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Why This Matters */}
           <ContentCard variant="highlight">

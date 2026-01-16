@@ -46,9 +46,10 @@ const PromptGuide = () => {
         description="Prompts define the realism and quality of the entire task. A strong prompt ensures the work produced reflects real investment banking workflows." 
       />
 
-      <PageNavigationMenu items={navigationItems} />
-      
-      <div className="container mx-auto px-4 py-8 lg:ml-[32rem] pt-4">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-8 pt-4 flex-1 min-w-0">
         {/* Gold Example Prompts Button */}
         <div className="max-w-3xl mx-auto mb-10">
           <Button
@@ -929,6 +930,7 @@ const PromptGuide = () => {
 
           <PageNavigation />
         </div>
+      </div>
       </div>
     </Layout>
   );

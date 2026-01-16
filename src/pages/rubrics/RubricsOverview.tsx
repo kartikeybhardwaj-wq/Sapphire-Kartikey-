@@ -82,9 +82,10 @@ const RubricsOverview = () => {
         description="Learn how to create objective, measurable evaluation criteria for investment banking AI tasks. Your rubrics will help evaluate model performance across reasoning, tool usage, and financial analysis." 
       />
 
-      <PageNavigationMenu items={navigationItems} />
-
-      <div className="container mx-auto px-4 py-8 lg:ml-[32rem] pt-4">
+      <div className="flex gap-0 w-full">
+        <PageNavigationMenu items={navigationItems} />
+        
+        <div className="container mx-auto px-4 py-8 pt-4 flex-1 min-w-0">
         <div className="max-w-4xl mx-auto space-y-16">
 
           {/* Chapter 1: Overview & Fundamentals */}
@@ -541,6 +542,7 @@ const RubricsOverview = () => {
           <PageNavigation />
 
         </div>
+      </div>
       </div>
     </Layout>
   );
