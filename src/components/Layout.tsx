@@ -1,5 +1,6 @@
 import { SearchCommand } from "@/components/SearchCommand";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu } from "lucide-react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
@@ -31,6 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
                 <div className="flex items-center gap-2">
                   <SearchCommand />
+                  <ThemeToggle />
                 </div>
               </div>
             </div>

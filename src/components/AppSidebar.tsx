@@ -44,6 +44,7 @@ const bottomNavItems = [
   { to: "/task-walkthrough", label: "Task Walkthrough", icon: Map },
   { to: "/task-distribution", label: "Task Distribution", icon: LayoutGrid },
   { to: "/examples", label: "Examples", icon: Star },
+  { to: "/glossary", label: "Glossary", icon: BookOpen },
   { to: "/faq", label: "FAQ", icon: HelpCircle },
   { to: "/pay", label: "Pay", icon: DollarSign },
 ];

@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { PasswordGate } from "@/components/PasswordGate";
+import { ThemeProvider } from "@/context/ThemeContext";
 import Index from "./pages/Index";
 import Onboarding from "./pages/Onboarding";
 import Workflow from "./pages/Workflow";
@@ -24,6 +25,7 @@ import Categories from "./pages/Categories";
 import Examples from "./pages/Examples";
 import InteractiveModule from "./pages/InteractiveModule";
 import FAQ from "./pages/FAQ";
+import Glossary from "./pages/Glossary";
 import Pay from "./pages/Pay";
 import TaskDistribution from "./pages/TaskDistribution";
 import TaskWalkthrough from "./pages/TaskWalkthrough";
@@ -44,12 +46,13 @@ const ScrollToTop = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <PasswordGate>
-        <BrowserRouter>
+  <ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <PasswordGate>
+          <BrowserRouter>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
@@ -75,14 +78,16 @@ const App = () => (
             <Route path="/task-distribution" element={<TaskDistribution />} />
             <Route path="/roles" element={<Roles />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/glossary" element={<Glossary />} />
             <Route path="/pay" element={<Pay />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </PasswordGate>
-    </TooltipProvider>
-  </QueryClientProvider>
+          </BrowserRouter>
+        </PasswordGate>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </ThemeProvider>
 );
 
 export default App;
